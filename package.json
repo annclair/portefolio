@@ -1,0 +1,14 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "author": "Anne-Claire SEBIROU",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.5"
+  }
+}
