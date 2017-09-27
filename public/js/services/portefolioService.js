@@ -5,6 +5,9 @@
         return {
             get() {
                 return $http.get('/api/websites')
+            },
+            add(website) {
+                return $http.post('/api/websites', website)
             }
         }
     })
