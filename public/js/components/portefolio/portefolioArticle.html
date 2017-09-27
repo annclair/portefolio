@@ -1,0 +1,22 @@
+<div class="row">
+    <h1 class="center">{{$ctrl.portefolio.name}}</h1>
+    <div class="col s12 offset-m2 m8">
+        <div class="card">
+            <div class="card-image">
+                <img class="activator" src="pictures/{{$ctrl.portefolio.image}}">
+            </div>
+            <div class="card-content">
+                <a ng-click="$ctrl.close()"> 
+                    <i class="material-icons small right">close</i>
+                </a>
+                <h2>Contexte du projet</h2>
+                <p>{{$ctrl.portefolio.clientPresentation}}</p>
+                <h2>Description du projet</h2>
+                <p>{{$ctrl.portefolio.projectDescription}}</p>
+                <h2>Description technique</h2>
+                <p>{{$ctrl.portefolio.technicalDescription}}</p>
+                <p>Url : <a href="{{$ctrl.portefolio.url}}">{{$ctrl.portefolio.url}}</a></p>
+            </div>
+        </div>
+    </div>
+</div>

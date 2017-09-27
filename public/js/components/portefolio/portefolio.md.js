@@ -10,5 +10,9 @@
             url: '/new',
             template: '<portefolio-add></portefolio-add>'
         })
+        .state('app.portefolioArticle', {
+            url: '/portefolio/:id',
+            template: '<portefolio-article></portefolio-article>'
+        })
     }])
 })(require('angular').module('app.portefolio', []))

@@ -12,6 +12,9 @@
                     portefoliosService.get().then((res) => {
                         this.portefolios = res.data
                     })
+                },
+                goCreateWebsite() {
+                    $state.go('app.portefolioAdd')
                 }
             })
         }]

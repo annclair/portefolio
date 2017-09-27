@@ -3,26 +3,33 @@
         <div class="card sticky-action">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="pictures/{{portefolio.image}}">
-                
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">
                     {{portefolio.name}}
                     <i class="material-icons right">more_vert</i>
                 </span>
-                <p><a href="{{portefolio.url}}">{{portefolio.url}}</a></p>
             </div>
-            <div class="card-reveal" ng-if="!portefolio.editMode">
+            <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">
                     {{portefolio.name}}
                     <i class="material-icons right">close</i>
                 </span>
-                <p>{{portefolio.clientPresentation}}</p>
                 <p>{{portefolio.projectDescription}}</p>
-                <p>{{portefolio.technicalDescription}}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{portefolio.url}}">
+                    <i class="material-icons small">link</i>
+                </a>
+                <a ui-sref="app.portefolioArticle({id: portefolio._id})"> 
+                    <i class="material-icons small right">info</i>
+                </a>
             </div>
         </div>
     </div>
 </div>
-
-<edit-bar></edit-bar>
+<div class="fixed-action-btn horizontal click-to-toggle">
+    <a class="btn-floating btn-large red" ng-click="$ctrl.goCreateWebsite()">
+        <i class="material-icons">add</i>
+    </a>
+</div>
