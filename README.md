@@ -18,4 +18,4 @@
 
     npm run start
 
-    read, create, update or delete websites with postman on : http://localhost:8000/api/websites/
+    create, update or delete websites with postman on : http://localhost:8000/api/websites/
