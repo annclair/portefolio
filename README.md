@@ -1,10 +1,10 @@
 # Portefolio
 
-
 ### Prerequis
 
     Node
     Mongodb
+    Postman
 
 ### Installation
 
@@ -14,4 +14,8 @@
 
 ### Développement
 
+    npm run build
+
     npm run start
+
+    read, create, update or delete websites with postman on : http://localhost:8000/api/websites/
