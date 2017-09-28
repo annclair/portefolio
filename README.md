@@ -17,3 +17,5 @@
     npm run build
 
     npm run start
+
+    Read, create, update & delete users with postmant on http://localhost:8000/api/users/
