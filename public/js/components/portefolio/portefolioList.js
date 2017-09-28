@@ -2,6 +2,9 @@
     'use strict'
 
     app.component("portefolioList", {
+        bindings: {
+            limit: "="
+        },
         templateUrl: 'js/components/portefolio/portefolioList.html',
         controller: ['portefoliosService', '$state', 'usersService', function (portefoliosService, $state, usersService) {
             angular.extend(this, {

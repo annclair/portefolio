@@ -1,6 +1,7 @@
 $primary : #01D0D0;
-$gray-transparent_1: rgba(163, 157, 157, 0.34);
-$gray-transparent_2: rgba(246, 243, 243, 0.43);
+$primary-dark: #01BFBF;
+$gray-transparent_1: rgb(163, 157, 157);
+$gray-transparent_2: rgb(172, 172, 172);
 
 p {
     text-align: justify;
@@ -15,19 +16,33 @@ h2 {
     font-size : 2em;
 }
 
+nav{
+    background-color: gray;
+}
+
+.navLinks {
+    color : white !important;
+    font-size: 1.6em;
+}
+
+.introCard {
+    background-color: $primary-dark;
+}
+
+.introHome{
+    font-size: 1.3em;
+    font-style: italic;
+}
+
 // button color style
-
-.cancelColor:hover, .validationColor:hover {
-    background-color: $gray-transparent_1;
-    color : black !important;
-}
-
-.waves-effect:hover {
-    background-color: $gray-transparent_2;
-}
 
 .actionColor {
     background-color: $primary;
+    color:white !important;
+}
+
+.actionColor:hover {
+    background-color: $primary-dark;
 }
 
 .validationColor {
@@ -47,3 +62,14 @@ h2 {
 .editColor {
     background-color: gray;
 }
+
+.cancelColor:hover, .validationColor:hover {
+    background-color: $gray-transparent_1;
+    color : black !important;
+}
+
+.deleteColor:hover, .editColor:hover {
+    background-color: $gray-transparent_2;
+    color: black !important;
+}
+

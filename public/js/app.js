@@ -5,6 +5,7 @@
   require('angular-cookies'),
   require('angular-materialize'),
   'app.home',
+  'app.common',
   'app.portefolio',
   'app.login',
   'app.services',

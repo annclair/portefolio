@@ -1,5 +1,6 @@
+<h1 class="center">Mon portefolio</h1>
 <div class="row">
-    <div class="col s12 m6 xl4" ng-repeat="portefolio in $ctrl.portefolios">
+    <div class="col s12 m6 xl4" ng-repeat="portefolio in $ctrl.portefolios | limitTo : $ctrl.limit">
         <div class="card sticky-action">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="pictures/{{portefolio.image}}">
