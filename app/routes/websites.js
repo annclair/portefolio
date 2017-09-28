@@ -1,4 +1,5 @@
 'use strict'
+let Auth = require('../middlewares/authentification')
 let WebsitesController = require('../controllers/WebsitesController')
 
 module.exports = (app) => {
@@ -13,15 +14,15 @@ module.exports = (app) => {
         return ctrl.findById(req, res, next)
     })
 
-    app.post('/websites', (req, res, next) => {
+    app.post('/websites', Auth.isAuthenticate, (req, res, next) => {
         return ctrl.create(req, res, next)
     })
 
-    app.put('/websites/:id', (req, res, next) => {
+    app.put('/websites/:id', Auth.isAuthenticate, (req, res, next) => {
         return ctrl.update(req, res, next)
     })
 
-    app.delete('/websites/:id', (req, res, next) => {
+    app.delete('/websites/:id', Auth.isAuthenticate, (req, res, next) => {
         return ctrl.delete(req, res, next)
     })
 }

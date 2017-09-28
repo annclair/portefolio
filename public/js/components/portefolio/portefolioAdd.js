@@ -3,8 +3,16 @@
 
     app.component("portefolioAdd", {
         templateUrl: 'js/components/portefolio/portefolioAdd.html',
-        controller: ['portefoliosService', '$state', function (portefoliosService, $state) {
+        controller: ['portefoliosService', '$state', 'usersService', function (portefoliosService, $state, usersService) {
             angular.extend(this, {
+                $onInit() {
+                    this.getUser();
+                },
+                getUser() {
+                    usersService.getCurrent().then((user) => {
+                        this.user = user
+                    })
+                },
                 add() {
                     portefoliosService.add(this.portefolio).then((res) => {
                         this.portefolio = {};

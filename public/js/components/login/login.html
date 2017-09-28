@@ -1,0 +1,12 @@
+<div>
+    <h1 class="center">Page de connexion</h1>
+    <div class="input-field">
+        <input type="text" ng-model="$ctrl.user.email" />
+        <label>Email</label>
+    </div>
+    <div class="input-field">
+        <input type="password" ng-model="$ctrl.user.password" />
+        <label>Mot de passe</label>
+    </div>
+    <button class="btn" ng-click="$ctrl.connect($ctrl.user)">Connect</button>
+</div>

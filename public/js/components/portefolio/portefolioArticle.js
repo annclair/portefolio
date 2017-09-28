@@ -3,11 +3,17 @@
 
     app.component("portefolioArticle", {
         templateUrl: 'js/components/portefolio/portefolioArticle.html',
-        controller: ['portefoliosService', '$state', function (portefoliosService, $state) {
+        controller: ['portefoliosService', '$state', 'usersService', function (portefoliosService, $state, usersService) {
             angular.extend(this, {
                 $onInit() {
+                    this.getUser();
                     this.get($state.params.id);
                     this.modeEdit=false;
+                },
+                getUser() {
+                    usersService.getCurrent().then((user) => {
+                        this.user = user
+                    })
                 },
                 get(selectedWebsiteId) {
                     portefoliosService.getById(selectedWebsiteId).then((res) => {
