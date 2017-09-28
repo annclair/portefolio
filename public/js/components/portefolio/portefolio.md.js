@@ -7,7 +7,7 @@
             template: '<portefolio-list></portefolio-list>'
         })
         .state('app.portefolioAdd', {
-            url: '/new',
+            url: '/portefolio/new',
             template: '<portefolio-add></portefolio-add>'
         })
         .state('app.portefolioArticle', {
