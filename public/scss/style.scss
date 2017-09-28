@@ -1,4 +1,49 @@
+$primary : #01D0D0;
+$gray-transparent_1: rgba(163, 157, 157, 0.34);
+$gray-transparent_2: rgba(246, 243, 243, 0.43);
+
 p {
     text-align: justify;
     padding: 1em;
+}
+
+a {
+    color : $primary !important;
+}
+
+h2 {
+    font-size : 2em;
+}
+
+// button color style
+
+.cancelColor:hover, .validationColor:hover {
+    background-color: $gray-transparent_1;
+    color : black !important;
+}
+
+.waves-effect:hover {
+    background-color: $gray-transparent_2;
+}
+
+.actionColor {
+    background-color: $primary;
+}
+
+.validationColor {
+    background-color: gray;
+    color: white !important;
+}
+
+.cancelColor {
+    background-color: black;
+    color: white !important;
+}
+
+.deleteColor {
+    background-color: black;
+}
+
+.editColor {
+    background-color: gray;
 }

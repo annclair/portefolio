@@ -51,26 +51,30 @@
                     <label>Lien du site</label>
                 </div>
             </div>
-        </div>
-        <div class="center">
-            <a class="btn-floating red" ng-click="$ctrl.cancel()"><i class="material-icons">clear</i></a>
-            <a class="btn-floating green" ng-click="$ctrl.update($ctrl.website)"><i class="material-icons">check</i></a>
+            <div classs="card-action">
+                <a class="waves-effect waves-light btn cancelColor col s6" ng-click="$ctrl.cancel()">
+                    <i class="material-icons">clear</i>
+                </a>
+                <a class="waves-effect waves-light btn validationColor col s6"ng-click="$ctrl.update($ctrl.website)">
+                    <i class="material-icons">check</i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="fixed-action-btn horizontal" ng-if="!$ctrl.modeEdit">
-    <a class="btn-floating btn-large red">
+    <a class="btn-floating btn-large actionColor">
       <i class="large material-icons">menu</i>
     </a>
     <ul>
         <li>
-            <a class="btn-floating red" ng-click="$ctrl.delete($ctrl.website)">
+            <a class="btn-floating deleteColor" ng-click="$ctrl.delete($ctrl.website)">
                 <i class="material-icons">delete</i>
             </a>
         </li>
         <li>
-            <a class="btn-floating blue" ng-click="$ctrl.editWebsite()">
+            <a class="btn-floating editColor" ng-click="$ctrl.editWebsite()">
                 <i class="material-icons">edit</i>
             </a>
         </li>
