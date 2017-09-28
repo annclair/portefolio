@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="row" ng-if=$ctrl.modeEdit>
+<div class="row" ng-if="$ctrl.modeEdit">
     <h1 class="center">Modifier le site web</h1>
     <div class="col s12 offset-m2 m8">
         <div class="card">
@@ -59,8 +59,20 @@
     </div>
 </div>
 
-<div class="fixed-action-btn horizontal click-to-toggle">
-    <a class="btn-floating btn-large red" ng-click="$ctrl.editWebsite()">
-        <i class="material-icons">edit</i>
+<div class="fixed-action-btn horizontal" ng-if="!$ctrl.modeEdit">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
     </a>
+    <ul>
+        <li>
+            <a class="btn-floating red" ng-click="$ctrl.delete($ctrl.website)">
+                <i class="material-icons">delete</i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating blue" ng-click="$ctrl.editWebsite()">
+                <i class="material-icons">edit</i>
+            </a>
+        </li>
+    </ul>
 </div>

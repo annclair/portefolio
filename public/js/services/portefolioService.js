@@ -14,6 +14,9 @@
             },
             update(website) {
                 return $http.put('/api/websites/' + website._id, website)
+            },
+            delete(website) {
+                return $http.delete('/api/websites/' + website._id)
             }
         }
     })

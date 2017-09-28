@@ -17,5 +17,3 @@
     npm run build
 
     npm run start
-
-    delete websites with postman on : http://localhost:8000/api/websites/

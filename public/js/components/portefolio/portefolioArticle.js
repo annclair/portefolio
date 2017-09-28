@@ -25,8 +25,12 @@
                 },
                 update(website) {
                     portefoliosService.update(website).then((res) => {
-                        console.log('edit')
                         this.cancel();
+                    })
+                },
+                delete(website) {
+                    portefoliosService.delete(website).then((res) => {
+                        this.close()
                     })
                 }
             })
