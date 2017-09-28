@@ -1,22 +1,66 @@
-<div class="row">
-    <h1 class="center">{{$ctrl.portefolio.name}}</h1>
+<div class="row" ng-if="!$ctrl.modeEdit">
+    <h1 class="center">{{$ctrl.website.name}}</h1>
     <div class="col s12 offset-m2 m8">
         <div class="card">
             <div class="card-image">
-                <img class="activator" src="pictures/{{$ctrl.portefolio.image}}">
+                <img class="activator" src="pictures/{{$ctrl.website.image}}">
             </div>
             <div class="card-content">
                 <a ng-click="$ctrl.close()"> 
                     <i class="material-icons small right">close</i>
                 </a>
                 <h2>Contexte du projet</h2>
-                <p>{{$ctrl.portefolio.clientPresentation}}</p>
+                <p>{{$ctrl.website.clientPresentation}}</p>
                 <h2>Description du projet</h2>
-                <p>{{$ctrl.portefolio.projectDescription}}</p>
+                <p>{{$ctrl.website.projectDescription}}</p>
                 <h2>Description technique</h2>
-                <p>{{$ctrl.portefolio.technicalDescription}}</p>
-                <p>Url : <a href="{{$ctrl.portefolio.url}}">{{$ctrl.portefolio.url}}</a></p>
+                <p>{{$ctrl.website.technicalDescription}}</p>
+                <p>Url : <a href="{{$ctrl.website.url}}">{{$ctrl.website.url}}</a></p>
             </div>
         </div>
     </div>
+</div>
+
+<div class="row" ng-if=$ctrl.modeEdit>
+    <h1 class="center">Modifier le site web</h1>
+    <div class="col s12 offset-m2 m8">
+        <div class="card">
+            <div class="card-content">
+                <div class="input-field">
+                    <input ng-model="$ctrl.website.image" type="text" />
+                    <label>Url de l'image</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" ng-model="$ctrl.website.name" />
+                    <label>Nom du site</label>
+                </div>
+                <div class="input-field">
+                    <textarea ng-model="$ctrl.website.clientPresentation" class="materialize-textarea"></textarea>
+                    <label>Contexte du projet</label>
+                </div>
+                <div class="input-field">
+                    <textarea ng-model="$ctrl.website.projectDescription" class="materialize-textarea"></textarea>
+                    <label>Description projet</label>
+                </div>
+                <div class="input-field">
+                    <textarea ng-model="$ctrl.website.technicalDescription" class="materialize-textarea"></textarea>
+                    <label>Description technique du projet</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" ng-model="$ctrl.website.url" />
+                    <label>Lien du site</label>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <a class="btn-floating red" ng-click="$ctrl.cancel()"><i class="material-icons">clear</i></a>
+            <a class="btn-floating green" ng-click="$ctrl.update($ctrl.website)"><i class="material-icons">check</i></a>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-action-btn horizontal click-to-toggle">
+    <a class="btn-floating btn-large red" ng-click="$ctrl.editWebsite()">
+        <i class="material-icons">edit</i>
+    </a>
 </div>

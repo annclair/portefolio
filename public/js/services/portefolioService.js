@@ -11,6 +11,9 @@
             },
             add(website) {
                 return $http.post('/api/websites', website)
+            },
+            update(website) {
+                return $http.put('/api/websites/' + website._id, website)
             }
         }
     })
