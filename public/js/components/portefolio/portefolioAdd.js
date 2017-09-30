@@ -13,14 +13,19 @@
                         this.user = user
                     })
                 },
-                add() {
-                    portefoliosService.add(this.portefolio).then((res) => {
-                        this.portefolio = {};
+                add(website) {
+                    portefoliosService.add(website).then((res) => {
+                        this.website = {};
                         $state.go('app.portefolioList')
                     })
                 },
                 cancel() {
                     $state.go('app.portefolioList')
+                },
+                submitForm(form, website) {
+                    if (form.$valid) {
+                        this.add(website);
+                    }
                 }
             })
         }]

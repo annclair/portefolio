@@ -38,6 +38,11 @@
                     portefoliosService.delete(website).then((res) => {
                         this.close()
                     })
+                },
+                submitForm(form, website) {
+                    if (form.$valid) {
+                        this.update(website);
+                    }
                 }
             })
         }]
