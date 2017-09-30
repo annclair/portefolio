@@ -1,7 +1,11 @@
+/* color definition */
+
 $primary : #01D0D0;
 $primary-dark: #01BFBF;
 $gray-transparent_1: rgb(163, 157, 157);
 $gray-transparent_2: rgb(172, 172, 172);
+
+/* common styles */
 
 p {
     text-align: justify;
@@ -16,7 +20,9 @@ h2 {
     font-size : 2em;
 }
 
-nav{
+/* navbar style*/
+
+nav {
     background-color: gray;
 }
 
@@ -25,25 +31,47 @@ nav{
     font-size: 1.6em;
 }
 
-.introCard {
-    background-color: $primary-dark;
-}
-
-.introHome{
-    font-size: 1.3em;
-    font-style: italic;
-}
-
-.errorMessage{
-    color: $primary;
-    font-style: italic;
-}
-
 .darkBackground {
     background-color: gray
 }
 
-// button color style
+/* home page style */
+
+.introCard {
+    background-color: $primary-dark;
+}
+
+.introHome {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+/* form style */
+
+.input-field input:focus + label {
+    color: $primary !important;
+}
+
+.row .input-field input:focus {
+    border-bottom: 1px solid $primary !important;
+    box-shadow: 0 1px 0 0 $primary-dark !important;
+}
+
+.input-field textarea:focus + label {
+  color: $primary !important;
+}
+
+input[type=text]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+   border-bottom: 1px solid $primary !important;
+   box-shadow: 0 1px 0 0 $primary-dark !important;
+}
+
+.errorMessage {
+    color: $primary;
+    font-style: italic;
+}
+
+/* button color style */
 
 .actionColor {
     background-color: $primary;
@@ -82,4 +110,3 @@ nav{
     background-color: $gray-transparent_2;
     color: black !important;
 }
-
