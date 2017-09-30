@@ -1,12 +1,12 @@
-<div>
+<div class="row">
     <h1 class="center">Page de connexion</h1>
-    <div class="input-field">
+    <div class="input-field col s12 offset-m3 m6">
         <input type="text" ng-model="$ctrl.user.email" />
         <label>Email</label>
     </div>
-    <div class="input-field">
+    <div class="input-field col s12 offset-m3 m6">
         <input type="password" ng-model="$ctrl.user.password" />
         <label>Mot de passe</label>
     </div>
-    <button class="btn" ng-click="$ctrl.connect($ctrl.user)">Connect</button>
+    <button class="btn actionColor waves-effect waves-light col s12 offset-m3 m6" ng-click="$ctrl.connect($ctrl.user)">Connect</button>
 </div>
