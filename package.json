@@ -6,7 +6,7 @@
   "scripts": {
     "build": "brunch build",
     "dev": "brunch watch --server",
-    "start": "nodemon portefolio"
+    "start": "node portefolio"
   },
   "author": "Anne-Claire SEBIROU",
   "license": "MIT",
