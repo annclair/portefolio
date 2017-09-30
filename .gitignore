@@ -2,8 +2,5 @@
 
 npm-debug.log
 
-app.min.*
-vendor.min.*
-
 *.jpg
 *.png
