@@ -19,7 +19,8 @@
                 <p>{{website.projectDescription}}</p>
             </div>
             <div class="card-action">
-                <a href="{{website.url}}">
+                <a href="{{website.url}}" tooltipped data-position="top" 
+                data-delay="50" data-tooltip="{{website.url}}">
                     <i class="material-icons small">link</i>
                 </a>
                 <a ui-sref="app.portefolioArticle({id: website._id})"> 
