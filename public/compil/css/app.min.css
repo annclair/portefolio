@@ -1,105 +1,97 @@
+/* color definition */
 /* common styles */
-
 p {
-    text-align: justify;
-    padding: 1em;
-}
+  text-align: justify;
+  padding: 1em; }
 
 a {
-    color : #01D0D0 !important;
-}
+  color: #01D0D0 !important;
+  cursor: pointer; }
 
 h2 {
-    font-size : 2em;
-}
-
-/* home page style*/
-
-.introCard {
-    background-color: #01BFBF;
-}
-
-.introHome {
-    font-size: 1.3em;
-    font-style: italic;
-}
+  font-size: 2em; }
 
 /* navbar style*/
-
 nav {
-    background-color: gray;
-}
+  background-color: gray; }
 
 .navLinks {
-    color : white !important;
-    font-size: 1.6em;
-}
+  color: white !important;
+  font-size: 1.6em; }
 
 .darkBackground {
-    background-color: gray
-}
+  background-color: gray; }
+
+/* home page style */
+.introCard {
+  background-color: #01BFBF; }
+
+.introHome {
+  font-size: 1.3em;
+  font-style: italic; }
 
 /* form style */
-
 .input-field input:focus + label {
-    color: #01D0D0 !important;
-}
+  color: #01D0D0 !important; }
 
 .row .input-field input:focus {
-    border-bottom: 1px solid #01D0D0 !important;
-    box-shadow: 0 1px 0 0 #01BFBF !important;
-}
+  border-bottom: 1px solid #01D0D0 !important;
+  box-shadow: 0 1px 0 0 #01BFBF !important; }
 
 .input-field textarea:focus + label {
-  color: #01D0D0 !important;
-}
+  color: #01D0D0 !important; }
 
 input[type=text]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-   border-bottom: 1px solid #01D0D0 !important;
-   box-shadow: 0 1px 0 0 #01BFBF !important;
-}
+  border-bottom: 1px solid #01D0D0 !important;
+  box-shadow: 0 1px 0 0 #01BFBF !important; }
 
 .errorMessage {
-    color: #01D0D0;
-    font-style: italic;
-}
+  color: #01D0D0;
+  font-style: italic; }
 
 /* button color style */
-
 .actionColor {
-    background-color: #01D0D0;
-    color:white !important;
-    margin-top : 20px;
-}
+  background-color: #01D0D0;
+  color: white !important;
+  margin-top: 20px; }
 
 .actionColor:hover {
-    background-color: #01BFBF;
-}
+  background-color: #01BFBF; }
 
 .validationColor {
-    background-color: gray;
-    color: white !important;
-}
+  background-color: gray;
+  color: white !important; }
 
 .cancelColor {
-    background-color: black;
-    color: white !important;
-}
+  background-color: black;
+  color: white !important; }
 
 .deleteColor {
-    background-color: black;
-}
+  background-color: black; }
 
 .editColor {
-    background-color: gray;
-}
+  background-color: gray; }
 
 .cancelColor:hover, .validationColor:hover {
-    background-color: rgb(163, 157, 157);
-    color : black !important;
-}
+  background-color: #a39d9d;
+  color: black !important; }
 
 .deleteColor:hover, .editColor:hover {
-    background-color: rgb(172, 172, 172);
-    color: black !important;
-}
+  background-color: #acacac;
+  color: black !important; }
+
+/* Comment style */
+.commentBloc {
+  padding-top: 2em; }
+
+.commentContent {
+  padding-top: 0;
+  margin-top: 0; }
+
+.strongComment {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+
+
+/*# sourceMappingURL=app.min.css.map*/
