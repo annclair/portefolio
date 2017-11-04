@@ -20,6 +20,63 @@
             </div>
         </div>
     </div>
+
+    <div class="col s12"> 
+        <div class="row commentBloc">
+            <div ng-if="$ctrl.comments.length === 0" class="center">
+                <h5>Il n'y a aucun commentaires, soyez le premier à en laisser un !</h6>
+                <i class="material-icons">sentiment_satisfied</i>
+            </div>
+            <div ng-if="$ctrl.comments.length !== 0">
+                <h5>{{$ctrl.comments.length}} commentaire{{$ctrl.comments.length===1 ? '' : 's'}} :</h6>
+            </div>
+            <div ng-repeat="comment in $ctrl.comments | orderBy : '-createdAt'">
+                <div class="section">
+                    <div class="row">
+                        <p class="col s10"><strong class="strongComment">{{comment.name}}</strong>, <em>le {{comment.createdAt | date: "dd/MM/yyyy ' à ' HH:mm"}}</em></p>
+                        <a class="col s1" ng-click="$ctrl.deleteComment(comment)" ng-if="$ctrl.user">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p class="commentContent">{{comment.content}}</p>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row commentBloc">
+            <h5>Laisser un commentaire</h5>
+            <div class="col s12 offset-m3 m6">
+                <form class="card" name="commentForm" ng-submit="$ctrl.submitCommentForm(commentForm, $ctrl.comment)">
+                    <div class="input-field">
+                        <input type="text" required ng-model="$ctrl.comment.name" />
+                        <label>Nom *</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" ng-model="$ctrl.comment.email" />
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <textarea class="materialize-textarea" required ng-model="$ctrl.comment.content">
+                                </textarea>
+                        <label>Commentaire *</label>
+                    </div>
+                    <a class="waves-effect waves-light btn cancelColor col s6" ng-click="$ctrl.cancelComment()">
+                        annuler
+                        <i class="material-icons right">cancel</i>
+                    </a>
+                    <button class="waves-effect waves-light btn validationColor col s6" type="submit" name="action">
+                        Publier
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <div class="row" ng-if="$ctrl.modeEdit">
@@ -86,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div classs="card-action">
+                <div>
                     <a class="waves-effect waves-light btn cancelColor col s6" ng-click="$ctrl.cancel()">
                         <i class="material-icons">clear</i>
                     </a>
