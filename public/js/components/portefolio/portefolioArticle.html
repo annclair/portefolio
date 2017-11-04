@@ -32,10 +32,18 @@
             </div>
             <div ng-repeat="comment in $ctrl.comments | orderBy : '-createdAt'">
                 <div class="section">
-                    <p><strong class="strongComment">{{comment.name}}</strong>, <em>le {{comment.createdAt | date: "dd/MM/yyyy ' à ' HH:mm"}}</em></p>
-                    <p class="commentContent">{{comment.content}}</p>
+                    <div class="row">
+                        <p class="col s10"><strong class="strongComment">{{comment.name}}</strong>, <em>le {{comment.createdAt | date: "dd/MM/yyyy ' à ' HH:mm"}}</em></p>
+                        <a class="col s1" ng-click="$ctrl.deleteComment(comment)" ng-if="$ctrl.user">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p class="commentContent">{{comment.content}}</p>
+                    </div>
+                    <div class="divider"></div>
                 </div>
-                <div class="divider"></div>
+                
             </div>
         </div>
         <div class="row commentBloc">
@@ -44,7 +52,7 @@
                 <form class="card" name="commentForm" ng-submit="$ctrl.submitCommentForm(commentForm, $ctrl.comment)">
                     <div class="input-field">
                         <input type="text" required ng-model="$ctrl.comment.name" />
-                        <label>Nom</label>
+                        <label>Nom *</label>
                     </div>
                     <div class="input-field">
                         <input type="text" ng-model="$ctrl.comment.email" />
@@ -53,7 +61,7 @@
                     <div class="input-field">
                         <textarea class="materialize-textarea" required ng-model="$ctrl.comment.content">
                                 </textarea>
-                        <label>Commentaire</label>
+                        <label>Commentaire *</label>
                     </div>
                     <a class="waves-effect waves-light btn cancelColor col s6" ng-click="$ctrl.cancelComment()">
                         annuler

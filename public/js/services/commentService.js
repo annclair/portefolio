@@ -8,6 +8,9 @@
             },
             add(comment) {
                 return $http.post('/api/comments', comment)
+            },
+            delete(comment) {
+                return $http.delete('/api/comments/' + comment._id)
             }
         }
     })

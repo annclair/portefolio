@@ -68,7 +68,12 @@
                 },
                 cancelComment(){
                     this.comment = {};
-                }
+                },
+                deleteComment(comment) {
+                    commentsService.delete(comment).then((res) => {
+                        this.getComment();
+                    })
+                },
             })
         }]
     })
