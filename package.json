@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.16.1"
+  },
   "scripts": {
     "build": "brunch build",
     "dev": "brunch watch --server",
@@ -21,7 +24,7 @@
     "express": "^4.15.5",
     "jsonwebtoken": "^7.4.3",
     "method-override": "^2.3.9",
-    "mongoose": "^4.11.13",
+    "mongoose": "^5.10.15",
     "morgan": "^1.8.2"
   },
   "devDependencies": {
