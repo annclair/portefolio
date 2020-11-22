@@ -27,7 +27,10 @@ app.use(cors())
 app.use('/api', routes())
 
 let mongoose = require('mongoose')
-mongoose.connect(ENV.db); // mettre lien fichier env.js
+mongoose.connect(ENV.db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}); // mettre lien fichier env.js
 
 app.use((error, request, response, next) => {
     console.error(error.stack)
